@@ -4,8 +4,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ENV NODE_ENV=production
-RUN echo "NODE_ENV is $NODE_ENV"
+# ENV NODE_ENV=production
+# RUN echo "NODE_ENV is $NODE_ENV"
 RUN npm run build
 
 # Serve with nginx
