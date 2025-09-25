@@ -21,3 +21,6 @@ steps:
 
 images:
   - asia-southeast1-docker.pkg.dev/$PROJECT_ID/github-connect-repo/user-frontend
+
+options:
+  logging: CLOUD_LOGGING_ONLY   # This avoids the log bucket error
