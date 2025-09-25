@@ -4,8 +4,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+ENV NODE_ENV=production
 RUN echo "NODE_ENV is $NODE_ENV"
+RUN npm run build
 
 # Serve with nginx
 FROM nginx:alpine
